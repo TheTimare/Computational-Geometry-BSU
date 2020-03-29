@@ -22,5 +22,5 @@ Generating 10 points and then show animation of graham's(+ andrew's improvements
 algorithm of convex hull building.
 ```
 
-####TODO:
+#### TODO:
 * rewrite commentaries from 1st and 2nd lab to english 
