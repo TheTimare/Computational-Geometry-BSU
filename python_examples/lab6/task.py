@@ -91,7 +91,7 @@ def find_righter_points(points: list, p1: Point, p2: Point):
 
 
 # Quick hull algorithm
-def build_convex_hull(left: Point, right: Point, points: list, convex_hull_points: list):
+def partial_convex_hull(left: Point, right: Point, points: list, convex_hull_points: list):
     max_area_triangle = triangle_area(left, right, points[0])
     sep = points[0]
     for i in range(1, len(points)):
@@ -104,13 +104,13 @@ def build_convex_hull(left: Point, right: Point, points: list, convex_hull_point
     s2 = find_lefter_points(points, sep, right)
 
     if s1:
-        build_convex_hull(left, sep, s1, convex_hull_points)
+        partial_convex_hull(left, sep, s1, convex_hull_points)
         convex_hull_points.append(sep)
     else:
         convex_hull_points.append(sep)
 
     if s2:
-        build_convex_hull(sep, right, s2, convex_hull_points)
+        partial_convex_hull(sep, right, s2, convex_hull_points)
     else:
         convex_hull_points.append(sep)
 
@@ -125,9 +125,9 @@ def complete_convex_hull(points: list):
     righter_points = find_righter_points(points, pl, pr)
 
     convex_hull_points.append(pl)
-    build_convex_hull(pl, pr, lefter_points, convex_hull_points)
+    partial_convex_hull(pl, pr, lefter_points, convex_hull_points)
     convex_hull_points.append(pr)
-    build_convex_hull(pr, pl, righter_points, convex_hull_points)
+    partial_convex_hull(pr, pl, righter_points, convex_hull_points)
 
     convex_hull_points.append(convex_hull_points[0])
     return convex_hull_points

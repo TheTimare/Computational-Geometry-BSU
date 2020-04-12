@@ -149,11 +149,8 @@ def set_diameter(points: list):
     i = 0
     while points[q_index % n] != points[0] and i < n:
         p_index += 1
-        if point_distance(points[p_index % n], points[q_index % n]) >= d:
-            d = point_distance(points[p_index % n], points[q_index % n])
         while triangle_area(points[p_index % n], points[(p_index + 1) % n], points[(q_index + 1) % n]) > \
                 triangle_area(points[p_index % n], points[(p_index + 1) % n], points[q_index % n]):
-            i += 1
             q_index += 1
             if point_distance(points[p_index % n], points[q_index % n]) != point_distance(points[q0_index % n], points[0]):
                 if point_distance(points[p_index % n], points[q_index % n]) >= d:
@@ -166,13 +163,17 @@ def set_diameter(points: list):
     return d
 
 
-def check(points: list):
+def diameter_points(points: list):
     for i in range(len(points)):
         for j in range(len(points)):
             if point_distance(points[i], points[j]) == set_diameter(points):
-                plt.plot([points[i].x, points[j].x], [points[i].y, points[j].y], "red")
-                return
+                return [points[i], points[j]]
     print("not found")
+
+
+def draw_diameter(points: list):
+    diameter_points_list = diameter_points(points)
+    plt.plot([diameter_points_list[0].x, diameter_points_list[1].x], [diameter_points_list[0].y, diameter_points_list[1].y], "red")
 
 
 def move(moving_points: list, vectors: list):
@@ -190,6 +191,7 @@ def init_motion(points: list):
         convex_hull_points = build_convex_hull(points)
 
         draw_points(points)
+        draw_diameter(convex_hull_points)
         draw_convex_hull(convex_hull_points, "blue")
         camera.snap()
 
