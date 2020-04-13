@@ -33,7 +33,7 @@ double xy_len;
 //Main function of lab 5
 void diameterJarvis(int i) {
 	int diamLimit = 30;
-	convexHull = buildConvexHull(points);
+	convexHull = buildConvexHullJarvis(points);
 	diameterPoints = get2PointsDiameter(convexHull);
 
 	if (getDiameter(convexHull) >= diamLimit)
@@ -160,7 +160,7 @@ void glut_init(int argc, char **argv, int numberOfPoints, int limitOfPointsValue
 	glut_init_part();
 
 	points = generatePoints(numberOfPoints, limitOfPointsValue); //points transfer to visual output function
-	speeds = generatePoints(numberOfPoints, 1, true);
+	speeds = generateSpeeds(numberOfPoints);
 
 	//Finding coordinates limits
 	xy_len = 5;
