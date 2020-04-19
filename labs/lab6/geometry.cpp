@@ -317,6 +317,8 @@ vector<Point> getRightPoints(vector<Point> points, Point p1, Point p2) {
 
 // Quick hull algorithm part
 void partialQuickHull(Point left, Point right, vector<Point> points, vector<Point> &hull) {
+	if (points.size() == 0) return; //if there are no left or right points
+
 	double maxAreaTriangle = triangleArea(left, right, points[0]);
 	Point sep = points[0];
 	for (int i = 1; i < points.size(); i++) {
@@ -330,18 +332,12 @@ void partialQuickHull(Point left, Point right, vector<Point> points, vector<Poin
 
 	if (s1.size() != 0) {
 		partialQuickHull(left, sep, s1, hull);
-		hull.push_back(sep);
 	}
-	else {
-		hull.push_back(sep);
-	}
-
+	hull.push_back(sep);
 	if (s2.size() != 0) {
 		partialQuickHull(sep, right, s2, hull);
 	}
-	else {
-		hull.push_back(sep);
-	}
+	
 }
 // Quick hull algorithm
 vector<Point> buildConvexHullQuick(vector<Point> points) {
@@ -350,6 +346,7 @@ vector<Point> buildConvexHullQuick(vector<Point> points) {
 	vector<Point> hull;
 	vector<Point> leftPoints = getLeftPoints(points, pl, pr),
 		rightPoints = getRightPoints(points, pl, pr);
+
 	hull.push_back(pl);
 	partialQuickHull(pl, pr, leftPoints, hull);
 	hull.push_back(pr);

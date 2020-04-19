@@ -29,7 +29,7 @@ vector<Point> speeds;
 vector<Point> convexHull;
 double xy_len;
 
-//Main function of lab 5
+//Main function of lab 6
 void QuickHullCycle(int i) {
 	int perimLim = 100;
 	convexHull = buildConvexHullQuick(points);
@@ -46,11 +46,13 @@ void QuickHullCycle(int i) {
 		points[i].x += relativeSpeedX;
 		points[i].y += relativeSpeedY;
 	}
+
 	for (int i = 0; i < points.size(); i++) {
 		xy_len = abs(points[i].x) > xy_len ? abs(points[i].x) : xy_len;
 		xy_len = abs(points[i].y) > xy_len ? abs(points[i].y) : xy_len;
 	}
 	glLoadIdentity();
+
 	glOrtho(-xy_len, xy_len, -xy_len, xy_len, -xy_len, xy_len); //set coordinates limits x,y,z
 
 	glutPostRedisplay(); //drawing frame
