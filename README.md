@@ -12,15 +12,32 @@ Find if line segments intersects or not. Show in on the screen.
 
 - Lab 3
 ```
-Generating 10 points that moving inside convex polygo. 
+Generating some points that moving inside convex polygon. 
 Then using anlge algorithm and sector algorithm to check if they inside polygons.
 Also using vectors to reflect points from sides of outer polygon.
 ```
 - Lab 4
 ```
-Generating 10 points and then show animation of graham's(+ andrew's improvements)
+Generating some points and then show animation of Grahams(+ Andrews improvements)
 algorithm of convex hull building.
 ```
+- Lab 5
+```
+Generating some points and then show animation of Jarvis algorithm of
+hull generating while points is moving. Also display diameter of the flat set.
+```
+- Lab 6
+```
+Generating some points and then show animation of Quick hull algorithm of
+hull generating while points is moving.
+```
 
-#### TODO:
-* rewrite commentaries from 1st and 2nd lab to english 
+### Accepted labs:
+- [x] Lab 1
+- [x] Lab 2
+- [x] Lab 3
+- [x] Lab 4
+- [ ] Lab 5
+- [ ] Lab 6
+
+###### Timofey Ivanov
