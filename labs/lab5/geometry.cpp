@@ -246,7 +246,7 @@ double getDiameter(vector<Point> points) {
 		}
         if (triangleArea(points[p_index % n], points[(p_index + 1) % n], points[(q_index + 1) % n]) == 
                 triangleArea(points[p_index % n], points[(p_index + 1) % n], points[q_index % n])) {
-			if ((points[p_index % n] - points[q_index % n]).getLength() != (points[q0_index % n] - points[-1]).getLength())
+			if ((points[p_index % n] - points[q_index % n]).getLength() != (points[q0_index % n] - points[points.size() - 1]).getLength())
 				if ((points[p_index % n] - points[q_index % n]).getLength() >= d)
 					d = (points[p_index % n] - points[q_index % n]).getLength();
 		}
