@@ -31,6 +31,10 @@ hull generating while points is moving. Also display diameter of the flat set.
 Generating some points and then show animation of Quick hull algorithm of
 hull generating while points is moving.
 ```
+- Lab 7
+```
+Constantly generating points and build dynamic convex hull around them.
+```
 
 ### Accepted labs:
 - [x] Lab 1
@@ -39,5 +43,6 @@ hull generating while points is moving.
 - [x] Lab 4
 - [ ] Lab 5
 - [ ] Lab 6
+- [ ] Lab 7
 
 ###### Timofey Ivanov
