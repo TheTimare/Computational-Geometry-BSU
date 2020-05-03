@@ -35,6 +35,15 @@ hull generating while points is moving.
 ```
 Constantly generating points and build dynamic convex hull around them.
 ```
+- Lab 8
+```
+TODO
+```
+- Lab 9
+```
+Calculating min distance in a set of points by "Divide and Conquer" 
+algorithm. Also movement of circles and their collisions.
+```
 
 ### Accepted labs:
 - [x] Lab 1
@@ -44,5 +53,7 @@ Constantly generating points and build dynamic convex hull around them.
 - [ ] Lab 5
 - [ ] Lab 6
 - [ ] Lab 7
+- [ ] Lab 8
+- [ ] Lab 9
 
 ###### Timofey Ivanov
