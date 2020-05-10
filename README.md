@@ -44,6 +44,10 @@ TODO
 Calculating min distance in a set of points by "Divide and Conquer" 
 algorithm. Also movement of circles and their collisions.
 ```
+- Lab 10
+```
+Calculating line segments cutting inside convex polygon. Cirus-Beck algorithm.
+```
 
 ### Accepted labs:
 - [x] Lab 1
@@ -53,7 +57,8 @@ algorithm. Also movement of circles and their collisions.
 - [ ] Lab 5
 - [ ] Lab 6
 - [ ] Lab 7
-- [ ] Lab 8
+- [ ] Lab 8 // TODO
 - [ ] Lab 9
+- [ ] Lab 10
 
 ###### Timofey Ivanov
