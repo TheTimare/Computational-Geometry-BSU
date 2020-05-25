@@ -37,7 +37,7 @@ Constantly generating points and build dynamic convex hull around them.
 ```
 - Lab 8
 ```
-TODO
+Calculating intersection of moving polygons.
 ```
 - Lab 9
 ```
