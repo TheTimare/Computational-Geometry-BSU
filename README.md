@@ -48,6 +48,14 @@ algorithm. Also movement of circles and their collisions.
 ```
 Calculating line segments cutting inside convex polygon. Cirus-Beck algorithm.
 ```
+- Lab 11
+```
+// TODO
+```
+- Lab 12
+```
+Building of Bezier curve and animation of this process.
+```
 
 ### Accepted labs:
 - [x] Lab 1
