@@ -35,7 +35,7 @@ hull generating while points is moving.
 ```
 Constantly generating points and build dynamic convex hull around them.
 ```
-- Lab 8
+- Lab 8 (Danilevich)
 ```
 Calculating intersection of moving polygons.
 ```
@@ -48,6 +48,14 @@ algorithm. Also movement of circles and their collisions.
 ```
 Calculating line segments cutting inside convex polygon. Cirus-Beck algorithm.
 ```
+- Lab 11
+```
+// TODO
+```
+- Lab 12
+```
+Building of Bezier curve and animation of this process.
+```
 
 ### Accepted labs:
 - [x] Lab 1
@@ -57,8 +65,10 @@ Calculating line segments cutting inside convex polygon. Cirus-Beck algorithm.
 - [x] Lab 5
 - [x] Lab 6
 - [x] Lab 7
-- [ ] Lab 8 // TODO
+- [x] Lab 8
 - [ ] Lab 9
-- [ ] Lab 10
+- [x] Lab 10
+- [ ] Lab 11
+- [ ] Lab 12
 
 ###### Timofey Ivanov
